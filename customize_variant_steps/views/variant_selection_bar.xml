@@ -22,6 +22,12 @@
                             </div>
                         </t>
                     </t>
+                    <div class="button confirm" t-on-click="" >
+                        Next
+                    </div>
+                    <div class="button confirm" t-on-click="" >
+                        Privous
+                    </div>
                 </div>
             </div>
             <form role="form" action="" method="post">
