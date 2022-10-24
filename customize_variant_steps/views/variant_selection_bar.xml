@@ -22,13 +22,14 @@
                             </div>
                         </t>
                     </t>
-                    <div class="button confirm" t-on-click="" >
-                        Next
-                    </div>
-                    <div class="button confirm" t-on-click="" >
-                        Privous
-                    </div>
+                    
                 </div>
+            </div>
+            <div class="btn btn-circle" t-on-click="" >
+                Next
+            </div>
+            <div class="btn btn-circle" t-on-click="" >
+                Privous
             </div>
             <form role="form" action="" method="post">
                 <t t-set="i" t-value="0"/>
