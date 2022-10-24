@@ -21,10 +21,14 @@ odoo.define('customize_variant_steps.main_', function (require) {
     var nxt_btn = $('#next');
             allWells.hide();
 
-    const act_vtn =  nxt_btn.click(function (e) {
+    
+
+     nxt_btn.click(function (e) {
       e.preventDefault();
+      console.log("e",e);
+      console.log("this",this)
       var $target = $($(this).attr('href')),
-              $item = $(this);
+      $item = $(this);
 
       if (!$item.hasClass('disabled')) {
           navListItems.removeClass('btn-primary').addClass('btn-default');

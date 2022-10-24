@@ -25,7 +25,7 @@
                     
                 </div>
             </div>
-            <div class="btn " t-on-click="act_vtn" id="next" >
+            <div class="btn btn-circle"  id="next" >
                 Next
             </div>
             <div class="btn btn-circle" t-on-click="" id="previous">
