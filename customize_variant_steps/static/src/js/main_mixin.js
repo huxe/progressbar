@@ -8,27 +8,51 @@ odoo.define('customize_variant_steps.main_', function (require) {
     var _t = core._t;
 
     
-    console.log("js file loaded")
+    console.log("js file loaded");
+
     
+
+
+
     var navListItems = $('div.setup-panel div a'),
             allWells = $('.setup-content'),
             allNextBtn = $('.nextBtn');
   
-    allWells.hide();
-  
-    navListItems.click(function (e) {
-        e.preventDefault();
-        var $target = $($(this).attr('href')),
-                $item = $(this);
-  
-        if (!$item.hasClass('disabled')) {
-            navListItems.removeClass('btn-primary').addClass('btn-default');
-            $item.addClass('btn-primary');
+    var nxt_btn = $('#next');
             allWells.hide();
-            $target.show();
-            $target.find('input:eq(0)').focus();
-        }
+
+    const act_vtn =  nxt_btn.click(function (e) {
+      e.preventDefault();
+      var $target = $($(this).attr('href')),
+              $item = $(this);
+
+      if (!$item.hasClass('disabled')) {
+          navListItems.removeClass('btn-primary').addClass('btn-default');
+          $item.addClass('btn-primary');
+          allWells.hide();
+          $target.show();
+          $target.find('input:eq(0)').focus();
+      }
     });
+
+    navListItems.click(function (e) {
+        // e.preventDefault();
+        // var $target = $($(this).attr('href')),
+        //         $item = $(this);
+  
+        // if (!$item.hasClass('disabled')) {
+        //     navListItems.removeClass('btn-primary').addClass('btn-default');
+        //     $item.addClass('btn-primary');
+        //     allWells.hide();
+        //     $target.show();
+        //     $target.find('input:eq(0)').focus();
+        // }
+    });
+
+    
+
+
+
   
     allNextBtn.click(function(){
         var curStep = $(this).closest(".setup-content"),
