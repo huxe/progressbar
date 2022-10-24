@@ -11,7 +11,21 @@ odoo.define('customize_variant_steps.main_', function (require) {
     console.log("js file loaded");
 
     
-
+      const next_btn = (e)=>{
+        e.preventDefault();
+        console.log("e",e);
+        console.log("this",this)
+        var $target = $($(this).attr('href')),
+        $item = $(this);
+  
+        if (!$item.hasClass('disabled')) {
+            navListItems.removeClass('btn-primary').addClass('btn-default');
+            $item.addClass('btn-primary');
+            allWells.hide();
+            $target.show();
+            $target.find('input:eq(0)').focus();
+        }
+      }
 
 
     var navListItems = $('div.setup-panel div a'),
@@ -23,21 +37,21 @@ odoo.define('customize_variant_steps.main_', function (require) {
 
     
 
-     nxt_btn.click(function (e) {
-      e.preventDefault();
-      console.log("e",e);
-      console.log("this",this)
-      var $target = $($(this).attr('href')),
-      $item = $(this);
+    //  nxt_btn.click(function (e) {
+    //   e.preventDefault();
+    //   console.log("e",e);
+    //   console.log("this",this)
+    //   var $target = $($(this).attr('href')),
+    //   $item = $(this);
 
-      if (!$item.hasClass('disabled')) {
-          navListItems.removeClass('btn-primary').addClass('btn-default');
-          $item.addClass('btn-primary');
-          allWells.hide();
-          $target.show();
-          $target.find('input:eq(0)').focus();
-      }
-    });
+    //   if (!$item.hasClass('disabled')) {
+    //       navListItems.removeClass('btn-primary').addClass('btn-default');
+    //       $item.addClass('btn-primary');
+    //       allWells.hide();
+    //       $target.show();
+    //       $target.find('input:eq(0)').focus();
+    //   }
+    // });
 
     navListItems.click(function (e) {
         // e.preventDefault();
