@@ -25,12 +25,7 @@
                     
                 </div>
             </div>
-            <div class="btn btn-circle"  t-on-click="next_btn" id="next" >
-                Next
-            </div>
-            <div class="btn btn-circle" t-on-click="" id="previous">
-                Privous
-            </div>
+            
             <form role="form" action="" method="post">
                 <t t-set="i" t-value="0"/>
                 <t t-foreach="product.valid_product_template_attribute_line_ids" t-as="ptal">

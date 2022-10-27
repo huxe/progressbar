@@ -11,12 +11,24 @@ odoo.define('customize_variant_steps.main_', function (require) {
     console.log("js file loaded");
 
     
-      const next_btn = (e)=>{
+     
+
+
+    var navListItems = $('div.setup-panel div a'),
+            allWells = $('.setup-content'),
+            allNextBtn = $('.nextBtn');
+  
+
+            allWells.hide();
+
+    
+
+     
+
+    navListItems.click(function (e) {
         e.preventDefault();
-        console.log("e",e);
-        console.log("this",this)
         var $target = $($(this).attr('href')),
-        $item = $(this);
+                $item = $(this);
   
         if (!$item.hasClass('disabled')) {
             navListItems.removeClass('btn-primary').addClass('btn-default');
@@ -25,46 +37,6 @@ odoo.define('customize_variant_steps.main_', function (require) {
             $target.show();
             $target.find('input:eq(0)').focus();
         }
-      }
-
-
-    var navListItems = $('div.setup-panel div a'),
-            allWells = $('.setup-content'),
-            allNextBtn = $('.nextBtn');
-  
-    var nxt_btn = $('#next');
-            allWells.hide();
-
-    
-
-    //  nxt_btn.click(function (e) {
-    //   e.preventDefault();
-    //   console.log("e",e);
-    //   console.log("this",this)
-    //   var $target = $($(this).attr('href')),
-    //   $item = $(this);
-
-    //   if (!$item.hasClass('disabled')) {
-    //       navListItems.removeClass('btn-primary').addClass('btn-default');
-    //       $item.addClass('btn-primary');
-    //       allWells.hide();
-    //       $target.show();
-    //       $target.find('input:eq(0)').focus();
-    //   }
-    // });
-
-    navListItems.click(function (e) {
-        // e.preventDefault();
-        // var $target = $($(this).attr('href')),
-        //         $item = $(this);
-  
-        // if (!$item.hasClass('disabled')) {
-        //     navListItems.removeClass('btn-primary').addClass('btn-default');
-        //     $item.addClass('btn-primary');
-        //     allWells.hide();
-        //     $target.show();
-        //     $target.find('input:eq(0)').focus();
-        // }
     });
 
     
